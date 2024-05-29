@@ -1,21 +1,12 @@
 import { IoMenu } from "react-icons/io5";
+import { useSideBarContext } from "../../context/SideBarContext";
 
 export default function NavBar() {
-
-    const sidebarOverlay = document.querySelector('.sidebar-overlay')
-    const sidebarMenu = document.querySelector('.sidebar-menu')
-    const main = document.querySelector('.main')
-
-    const sidebarToggle = (e) => {
-        e.preventDefault()
-        main.classList.toggle('active')
-        sidebarOverlay.classList.toggle('hidden')
-        sidebarMenu.classList.toggle('-translate-x-full')
-    }
+    const { setExpanded } = useSideBarContext();
 
     return (
         <div className="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
-            <button type="button" className="text-lg text-gray-600 sidebar-toggle" onClick={sidebarToggle}>
+            <button type="button" className="text-lg text-gray-600 sidebar-toggle" onClick={() => setExpanded((curr) => !curr)}>
                 <IoMenu />
             </button>
             <ul className="flex items-center text-sm ml-4">
@@ -28,7 +19,7 @@ export default function NavBar() {
             <ul className="ml-auto flex items-center">
                 <li className="mr-1 dropdown">
                     <button type="button" className="dropdown-toggle text-gray-400 w-8 h-8 rounded flex items-center justify-center hover:bg-gray-50 hover:text-gray-600">
-                        <i className="ri-search-line"></i>
+                        <IoMenu />
                     </button>
                     <div className="dropdown-menu shadow-md shadow-black/5 z-30 hidden max-w-xs w-full bg-white rounded-md border border-gray-100" data-popper-id="popper-0" data-popper-placement="bottom-end" style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate(-104px, 48px)" }}>
                         <form action="" className="p-4 border-b border-b-gray-100">

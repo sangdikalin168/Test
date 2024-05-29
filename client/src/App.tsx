@@ -1,11 +1,16 @@
 import NavBar from './components/NavBar/NavBar';
 import SideBar from './components/SideBar/SideBar';
+import { useSideBarContext } from './context/SideBarContext';
 
 function App() {
+
+  const { expanded, setExpanded } = useSideBarContext();
+
   return (
     <>
       <SideBar />
-      <main className="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
+      <div className={`fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden ${expanded ? "" : "hidden"}`} onClick={() => setExpanded((curr) => !curr)}></div>
+      <main className={`w-full bg-gray-50 min-h-screen transition-all ${expanded ? "md:ml-64 md:w-[calc(100%-256px)]" : ""}`}>
         <NavBar />
         <div className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -828,7 +833,9 @@ function App() {
         </div>
       </main>
     </>
+
   )
 }
+
 
 export default App

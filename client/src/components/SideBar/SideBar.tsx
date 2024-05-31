@@ -1,6 +1,6 @@
 import { useSideBarContext } from "../../context/SideBarContext";
 import SideBarItems from "./SideBarItems";
-import { HiOutlineUserCircle, HiOutlineTicket } from "react-icons/hi";
+import { HiOutlineUserCircle } from "react-icons/hi";
 import { FaUserCog } from "react-icons/fa";
 
 export default function SideBar() {
@@ -8,27 +8,17 @@ export default function SideBar() {
     const { expanded } = useSideBarContext();
     const items = [
         {
-            title: "សំបុត្រ",
-            path: "/ticket",
-            icon: <HiOutlineTicket className="mr-3 text-lg" />,
-        },
-        {
-            title: "សមាជិក",
-            path: "/members",
-            icon: <HiOutlineTicket className="mr-3 text-lg" />,
-        },
-        {
-            title: "Request",
+            title: "Oganization",
             icon: <HiOutlineUserCircle className="mr-3 text-lg" />,
             childrens: [
                 {
-                    title: "Hold Request",
-                    path: "/hold_request",
+                    title: "Departments",
+                    path: "/departments",
                     icon: <HiOutlineUserCircle className="mr-3 text-lg" />,
                 },
                 {
-                    title: "Transfer",
-                    path: "/transfer_request",
+                    title: "Positions",
+                    path: "/positions",
                     icon: <HiOutlineUserCircle className="mr-3 text-lg" />,
                 },
             ],

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { MdOutlineDashboard } from "react-icons/md";
 import { BsChevronDown } from "react-icons/bs";
-import { Link } from "lucide-react";
 
 export default function SideBarItems({ item }: any) {
     const [open, setOpen] = useState(false);

@@ -4,6 +4,7 @@ import App from './App.tsx'
 import './index.css'
 import SideBarContextProvider from './context/SideBarContext.tsx'
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <SideBarContextProvider>

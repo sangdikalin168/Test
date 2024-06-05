@@ -67,48 +67,6 @@ export default function SideBar() {
                 {items.map((item: any, index: number) => (
                     <SideBarItems key={index} item={item} />
                 ))}
-                {/* <li className="mb-1 group">
-                    <a href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
-                        <HiOutlineTicket className="mr-3 text-lg" />
-                        <span className="text-sm">Dashboard</span>
-                    </a>
-                </li>
-                <li className="mb-1 group">
-                    <a href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                        <HiOutlineTicket className="mr-3 text-lg" />
-                        <span className="text-sm">Orders</span>
-                        <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
-                    </a>
-                    <ul className="pl-7 mt-2 group-[.selected]:block">
-                        <li className="mb-4">
-                            <a href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
-                        </li>
-                        <li className="mb-4">
-                            <a href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Completed order</a>
-                        </li>
-                        <li className="mb-4">
-                            <a href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Canceled order</a>
-                        </li>
-                    </ul>
-                </li>
-                <li className="mb-1 group">
-                    <a href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                        <HiOutlineTicket className="mr-3 text-lg" />
-                        <span className="text-sm">Orders</span>
-                        <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
-                    </a>
-                    <ul className="pl-7 mt-2 group-[.selected]:block">
-                        <li className="mb-4">
-                            <a href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
-                        </li>
-                        <li className="mb-4">
-                            <a href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Completed order</a>
-                        </li>
-                        <li className="mb-4">
-                            <a href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Canceled order</a>
-                        </li>
-                    </ul>
-                </li> */}
             </ul>
         </div>
 

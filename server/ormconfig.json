@@ -1,0 +1,12 @@
+{
+    "type": "mysql",
+    "host": "203.176.133.252",
+    "database": "hr_beta",
+    "username": "admin",
+    "password": "admin@MHG168",
+    "logging": false,
+    "synchronize": true,
+    "entities": [
+        "./src/entities/*.ts"
+    ]
+}
